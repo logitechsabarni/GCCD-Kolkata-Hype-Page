@@ -1,129 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My GCCD Kolkata '25 Hype Page</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    .dark-mode {
-      background-color: #1a202c;
-      color: white;
+    html { scroll-behavior: smooth; }
+    .dark-mode { background-color: #1a202c; color: white; }
+    .fade-in { opacity: 0; animation: fadeIn ease-in 1.2s forwards; }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
-
 <body class="bg-gray-50 text-gray-800 transition-colors duration-500" id="pageBody">
-  <!-- Hero Section -->
-  <section class="text-center py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+  <section class="text-center py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white fade-in">
     <h1 class="text-4xl md:text-6xl font-bold mb-4">Get Hyped for GCCD Kolkata '25!</h1>
     <p class="text-xl mb-6">Tech, Talks & the Ultimate Google Developer Experience</p>
     <a href="#about" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition">Why You Should Go ↓</a>
     <button onclick="toggleDarkMode()" class="ml-4 px-4 py-2 bg-gray-800 text-white rounded-full shadow hover:bg-gray-700 transition">Toggle Dark Mode 🌙</button>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-16 px-4 max-w-5xl mx-auto">
+  <section id="about" class="py-16 px-4 max-w-5xl mx-auto fade-in">
     <h2 class="text-3xl font-bold text-center mb-8">About the Event</h2>
     <p class="text-lg text-center mb-6">Google Cloud Community Days Kolkata '25 is where tech enthusiasts, developers, and innovators come together for a day filled with insights, inspiration, and connection. Hosted by the incredible GDG Kolkata team, this event brings the community vibe like no other.</p>
   </section>
 
-  <!-- Highlights -->
-  <section class="bg-white py-16 px-4">
+  <section class="bg-white py-16 px-4 fade-in">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-10">Event Highlights</h2>
       <div class="grid gap-8 grid-cols-1 md:grid-cols-4">
-        <div>
-          <div class="text-4xl">🎤</div>
-          <h3 class="text-xl font-semibold mt-2">Inspiring Talks</h3>
-        </div>
-        <div>
-          <div class="text-4xl">🌐</div>
-          <h3 class="text-xl font-semibold mt-2">Hands-on Tech</h3>
-        </div>
-        <div>
-          <div class="text-4xl">🤝</div>
-          <h3 class="text-xl font-semibold mt-2">Networking</h3>
-        </div>
-        <div>
-          <div class="text-4xl">🎁</div>
-          <h3 class="text-xl font-semibold mt-2">Swags & Fun</h3>
-        </div>
+        <div><div class="text-4xl">🎤</div><h3 class="text-xl font-semibold mt-2">Inspiring Talks</h3></div>
+        <div><div class="text-4xl">🌐</div><h3 class="text-xl font-semibold mt-2">Hands-on Tech</h3></div>
+        <div><div class="text-4xl">🤝</div><h3 class="text-xl font-semibold mt-2">Networking</h3></div>
+        <div><div class="text-4xl">🎁</div><h3 class="text-xl font-semibold mt-2">Swags & Fun</h3></div>
       </div>
     </div>
   </section>
 
-  <!-- Speakers -->
-  <section class="py-16 px-4 bg-gray-100">
+  <section class="py-16 px-4 bg-gray-100 fade-in">
     <h2 class="text-3xl font-bold text-center mb-10">Featured Speakers</h2>
     <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
       <div class="bg-white rounded-xl p-6 shadow text-center">
-        <img src="https://via.placeholder.com/100" alt="Speaker" class="mx-auto rounded-full mb-4">
-        <h3 class="text-xl font-bold">Jane Doe</h3>
-        <p class="text-sm">Cloud Advocate, Google</p>
+        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde" alt="Speaker 1" class="mx-auto rounded-full w-28 h-28 object-cover mb-4">
+        <h3 class="text-xl font-bold">Sunil Mehta</h3>
+        <p class="text-sm">AI Researcher, Google DeepMind</p>
       </div>
       <div class="bg-white rounded-xl p-6 shadow text-center">
-        <img src="https://via.placeholder.com/100" alt="Speaker" class="mx-auto rounded-full mb-4">
-        <h3 class="text-xl font-bold">John Smith</h3>
-        <p class="text-sm">AI Engineer, DeepMind</p>
+        <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39" alt="Speaker 2" class="mx-auto rounded-full w-28 h-28 object-cover mb-4">
+        <h3 class="text-xl font-bold">Arjun Rao</h3>
+        <p class="text-sm">Cloud Solution Architect, Microsoft</p>
       </div>
       <div class="bg-white rounded-xl p-6 shadow text-center">
-        <img src="https://via.placeholder.com/100" alt="Speaker" class="mx-auto rounded-full mb-4">
-        <h3 class="text-xl font-bold">Aditi Gupta</h3>
-        <p class="text-sm">Developer Expert, GDG</p>
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb" alt="Speaker 3" class="mx-auto rounded-full w-28 h-28 object-cover mb-4">
+        <h3 class="text-xl font-bold">Megha Nair</h3>
+        <p class="text-sm">Tech Community Lead, GDG India</p>
       </div>
     </div>
   </section>
 
-  <!-- Countdown Timer -->
-  <section class="py-16 px-4 text-center bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+  <section class="py-16 px-4 text-center bg-gradient-to-r from-purple-500 to-pink-500 text-white fade-in">
     <h2 class="text-3xl font-bold mb-4">Countdown to the Big Day</h2>
-    <div id="countdown" class="text-2xl font-mono"></div>
+    <div id="countdown" class="text-2xl font-mono animate-pulse"></div>
   </section>
 
-  <!-- Personal Perspective -->
-  <section class="py-16 px-4 max-w-4xl mx-auto">
+  <section class="py-16 px-4 max-w-4xl mx-auto fade-in">
     <h2 class="text-3xl font-bold text-center mb-8">Why I'm Hyped</h2>
     <p class="text-lg text-center">As a developer passionate about the latest in cloud, AI, and open source, GCCD is *the* place to be. I'm excited to meet like-minded devs, hear stories from industry leaders, and experience the buzzing energy of the GDG community!</p>
   </section>
 
-  <!-- Footer -->
   <footer class="bg-gray-800 text-white text-center py-6">
-    <p>Built with 💙 by [Your Name] @ GDG On Campus CodeSprint</p>
+    <p>Built with 💙 by Sabarni Guha @ GDG On Campus CodeSprint</p>
     <div class="mt-2 space-x-4">
-      <a href="#" class="hover:underline">GitHub</a>
-      <a href="#" class="hover:underline">LinkedIn</a>
-      <a href="#" class="hover:underline">Twitter</a>
+      <a href="https://github.com/logitechsabarni" class="hover:underline">GitHub</a>
+      <a href="https://www.linkedin.com/in/sabarni-guha-746567318" class="hover:underline">LinkedIn</a>
+      <a href="https://x.com/G20972Guha" class="hover:underline">Twitter</a>
     </div>
   </footer>
 
-  <!-- JavaScript -->
   <script>
-    // Countdown Timer
     const countdown = document.getElementById("countdown");
-    const eventDate = new Date("2025-01-15T09:00:00").getTime();
+    const now = new Date();
+    const eventDate = new Date(now.getTime() + 16 * 24 * 60 * 60 * 1000);
+    eventDate.setHours(9, 0, 0);
 
-    setInterval(() => {
+    function updateCountdown() {
       const now = new Date().getTime();
       const diff = eventDate - now;
-
       const days = Math.floor(diff / (1000 * 60 * 60 * 24));
       const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
       countdown.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }, 1000);
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
 
-    // Dark Mode Toggle
     function toggleDarkMode() {
       document.getElementById("pageBody").classList.toggle("dark-mode");
     }
   </script>
 </body>
-
 </html>
