@@ -1,0 +1,22 @@
+# GCCD Kolkata '25 Hype Page 🚀
+Welcome to my personal hype page for **Google Cloud Community Days Kolkata 2025**!
+## 🌟 Why This Page?
+Built during the **GDG On Campus FIEM CodeSprint**, this single-page site is all about the excitement, tech, and community vibes of GCCD.
+## 🧱 Tech Stack
+- HTML5
+- Tailwind CSS (CDN)
+- Vanilla JavaScript
+## ✨ Features
+- Responsive layout
+- Dark mode toggle
+- Countdown timer
+## 📸 Preview
+![Preview Screenshot](./screenshot.png)
+## 🚀 Live Demo
+[👉 View the site on GitHub Pages](https://your-username.github.io/gccd-kolkata-25-hype-page/)
+## 📁 How to Run Locally
+```bash
+git clone https://github.com/your-username/gccd-kolkata-25-hype-page.git
+cd gccd-kolkata-25-hype-page
+```
+Then open `index.html` in a browser.
