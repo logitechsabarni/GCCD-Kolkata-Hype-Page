@@ -10,15 +10,20 @@
     html {
       scroll-behavior: smooth;
     }
+    .dark-mode {
+      background-color: #1a202c;
+      color: white;
+    }
   </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 transition-colors duration-500" id="pageBody">
   <!-- Hero Section -->
   <section class="text-center py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
     <h1 class="text-4xl md:text-6xl font-bold mb-4">Get Hyped for GCCD Kolkata '25!</h1>
     <p class="text-xl mb-6">Tech, Talks & the Ultimate Google Developer Experience</p>
     <a href="#about" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition">Why You Should Go ↓</a>
+    <button onclick="toggleDarkMode()" class="ml-4 px-4 py-2 bg-gray-800 text-white rounded-full shadow hover:bg-gray-700 transition">Toggle Dark Mode 🌙</button>
   </section>
 
   <!-- About Section -->
@@ -96,8 +101,9 @@
     </div>
   </footer>
 
-  <!-- JavaScript Countdown -->
+  <!-- JavaScript -->
   <script>
+    // Countdown Timer
     const countdown = document.getElementById("countdown");
     const eventDate = new Date("2025-01-15T09:00:00").getTime();
 
@@ -112,6 +118,11 @@
 
       countdown.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }, 1000);
+
+    // Dark Mode Toggle
+    function toggleDarkMode() {
+      document.getElementById("pageBody").classList.toggle("dark-mode");
+    }
   </script>
 </body>
 
