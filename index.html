@@ -1,42 +1,77 @@
-
 <!DOCTYPE html>
-<html lang="en" class="transition duration-300">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My GCCD Kolkata '25 Hype Page</title>
-  <link rel="icon" href="favicon.png" type="image/png" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     html {
       scroll-behavior: smooth;
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition duration-300">
-  <!-- Dark Mode Toggle -->
-  <div class="flex justify-end p-4">
-    <button onclick="toggleDarkMode()" class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 px-4 py-2 rounded shadow">
-      Toggle Dark Mode
-    </button>
-  </div>
 
+<body class="bg-gray-50 text-gray-800">
   <!-- Hero Section -->
   <section class="text-center py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
     <h1 class="text-4xl md:text-6xl font-bold mb-4">Get Hyped for GCCD Kolkata '25!</h1>
     <p class="text-xl mb-6">Tech, Talks & the Ultimate Google Developer Experience</p>
-    <a href="#about" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition">
-      Why You Should Go ↓
-    </a>
+    <a href="#about" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition">Why You Should Go ↓</a>
   </section>
 
   <!-- About Section -->
   <section id="about" class="py-16 px-4 max-w-5xl mx-auto">
     <h2 class="text-3xl font-bold text-center mb-8">About the Event</h2>
-    <p class="text-lg text-center mb-6">
-      Google Cloud Community Days Kolkata '25 is where tech enthusiasts, developers, and innovators come together
-      for a day filled with insights, inspiration, and connection.
-    </p>
+    <p class="text-lg text-center mb-6">Google Cloud Community Days Kolkata '25 is where tech enthusiasts, developers, and innovators come together for a day filled with insights, inspiration, and connection. Hosted by the incredible GDG Kolkata team, this event brings the community vibe like no other.</p>
+  </section>
+
+  <!-- Highlights -->
+  <section class="bg-white py-16 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-10">Event Highlights</h2>
+      <div class="grid gap-8 grid-cols-1 md:grid-cols-4">
+        <div>
+          <div class="text-4xl">🎤</div>
+          <h3 class="text-xl font-semibold mt-2">Inspiring Talks</h3>
+        </div>
+        <div>
+          <div class="text-4xl">🌐</div>
+          <h3 class="text-xl font-semibold mt-2">Hands-on Tech</h3>
+        </div>
+        <div>
+          <div class="text-4xl">🤝</div>
+          <h3 class="text-xl font-semibold mt-2">Networking</h3>
+        </div>
+        <div>
+          <div class="text-4xl">🎁</div>
+          <h3 class="text-xl font-semibold mt-2">Swags & Fun</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speakers -->
+  <section class="py-16 px-4 bg-gray-100">
+    <h2 class="text-3xl font-bold text-center mb-10">Featured Speakers</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white rounded-xl p-6 shadow text-center">
+        <img src="https://via.placeholder.com/100" alt="Speaker" class="mx-auto rounded-full mb-4">
+        <h3 class="text-xl font-bold">Jane Doe</h3>
+        <p class="text-sm">Cloud Advocate, Google</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow text-center">
+        <img src="https://via.placeholder.com/100" alt="Speaker" class="mx-auto rounded-full mb-4">
+        <h3 class="text-xl font-bold">John Smith</h3>
+        <p class="text-sm">AI Engineer, DeepMind</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow text-center">
+        <img src="https://via.placeholder.com/100" alt="Speaker" class="mx-auto rounded-full mb-4">
+        <h3 class="text-xl font-bold">Aditi Gupta</h3>
+        <p class="text-sm">Developer Expert, GDG</p>
+      </div>
+    </div>
   </section>
 
   <!-- Countdown Timer -->
@@ -45,28 +80,39 @@
     <div id="countdown" class="text-2xl font-mono"></div>
   </section>
 
+  <!-- Personal Perspective -->
+  <section class="py-16 px-4 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8">Why I'm Hyped</h2>
+    <p class="text-lg text-center">As a developer passionate about the latest in cloud, AI, and open source, GCCD is *the* place to be. I'm excited to meet like-minded devs, hear stories from industry leaders, and experience the buzzing energy of the GDG community!</p>
+  </section>
+
   <!-- Footer -->
   <footer class="bg-gray-800 text-white text-center py-6">
-    <p>Built with 💙 by Your Name @ GDG On Campus CodeSprint</p>
+    <p>Built with 💙 by [Your Name] @ GDG On Campus CodeSprint</p>
+    <div class="mt-2 space-x-4">
+      <a href="#" class="hover:underline">GitHub</a>
+      <a href="#" class="hover:underline">LinkedIn</a>
+      <a href="#" class="hover:underline">Twitter</a>
+    </div>
   </footer>
 
-  <!-- JavaScript for Countdown and Dark Mode -->
+  <!-- JavaScript Countdown -->
   <script>
     const countdown = document.getElementById("countdown");
     const eventDate = new Date("2025-01-15T09:00:00").getTime();
+
     setInterval(() => {
       const now = new Date().getTime();
       const diff = eventDate - now;
+
       const days = Math.floor(diff / (1000 * 60 * 60 * 24));
       const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
       countdown.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }, 1000);
-
-    function toggleDarkMode() {
-      document.documentElement.classList.toggle("dark");
-    }
   </script>
 </body>
+
 </html>
