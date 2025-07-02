@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en" class="transition duration-300">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My GCCD Kolkata '25 Hype Page</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition duration-300">
+  <!-- Dark Mode Toggle -->
+  <div class="flex justify-end p-4">
+    <button onclick="toggleDarkMode()" class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 px-4 py-2 rounded shadow">
+      Toggle Dark Mode
+    </button>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Get Hyped for GCCD Kolkata '25!</h1>
+    <p class="text-xl mb-6">Tech, Talks & the Ultimate Google Developer Experience</p>
+    <a href="#about" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition">
+      Why You Should Go ↓
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 px-4 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8">About the Event</h2>
+    <p class="text-lg text-center mb-6">
+      Google Cloud Community Days Kolkata '25 is where tech enthusiasts, developers, and innovators come together
+      for a day filled with insights, inspiration, and connection.
+    </p>
+  </section>
+
+  <!-- Countdown Timer -->
+  <section class="py-16 px-4 text-center bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+    <h2 class="text-3xl font-bold mb-4">Countdown to the Big Day</h2>
+    <div id="countdown" class="text-2xl font-mono"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>Built with 💙 by Your Name @ GDG On Campus CodeSprint</p>
+  </footer>
+
+  <!-- JavaScript for Countdown and Dark Mode -->
+  <script>
+    const countdown = document.getElementById("countdown");
+    const eventDate = new Date("2025-01-15T09:00:00").getTime();
+    setInterval(() => {
+      const now = new Date().getTime();
+      const diff = eventDate - now;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      countdown.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
+
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle("dark");
+    }
+  </script>
+</body>
+</html>
