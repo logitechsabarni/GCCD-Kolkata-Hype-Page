@@ -33,4 +33,4 @@ This single-page site is designed to hype up the **GCCD Kolkata '25** event with
 - 💡 Event highlights (networking, swags, sessions)
 - 💬 Personal message on *why it matters*
 - 🚀 Hosted on GitHub Pages
-
+The link for the website or webpage is :- file:///C:/Users/SUMIT/Downloads/index%20(13).html.
