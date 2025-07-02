@@ -16,19 +16,36 @@
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 transition-colors duration-500" id="pageBody">
-  <section class="text-center py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white fade-in">
+
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow-md fixed w-full z-50 top-0 left-0">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="font-bold text-lg text-blue-600">GCCD Kolkata '25</h1>
+      <div class="space-x-4">
+        <a href="#why-attend" class="text-gray-800 hover:text-blue-500 font-medium">Why Attend</a>
+        <a href="#highlights" class="text-gray-800 hover:text-blue-500 font-medium">Highlights</a>
+        <a href="#speakers" class="text-gray-800 hover:text-blue-500 font-medium">Speakers</a>
+        <a href="#countdown" class="text-gray-800 hover:text-blue-500 font-medium">Countdown</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="text-center py-24 mt-16 bg-gradient-to-r from-blue-500 to-purple-600 text-white fade-in">
     <h1 class="text-4xl md:text-6xl font-bold mb-4">Get Hyped for GCCD Kolkata '25!</h1>
     <p class="text-xl mb-6">Tech, Talks & the Ultimate Google Developer Experience</p>
-    <a href="#about" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition">Why You Should Go ↓</a>
+    <a href="#why-attend" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition">Explore Now ↓</a>
     <button onclick="toggleDarkMode()" class="ml-4 px-4 py-2 bg-gray-800 text-white rounded-full shadow hover:bg-gray-700 transition">Toggle Dark Mode 🌙</button>
   </section>
 
-  <section id="about" class="py-16 px-4 max-w-5xl mx-auto fade-in">
-    <h2 class="text-3xl font-bold text-center mb-8">About the Event</h2>
+  <!-- Why Attend -->
+  <section id="why-attend" class="py-16 px-4 max-w-5xl mx-auto fade-in">
+    <h2 class="text-3xl font-bold text-center mb-8">Why You Should Attend</h2>
     <p class="text-lg text-center mb-6">Google Cloud Community Days Kolkata '25 is where tech enthusiasts, developers, and innovators come together for a day filled with insights, inspiration, and connection. Hosted by the incredible GDG Kolkata team, this event brings the community vibe like no other.</p>
   </section>
 
-  <section class="bg-white py-16 px-4 fade-in">
+  <!-- Highlights -->
+  <section id="highlights" class="bg-white py-16 px-4 fade-in">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-10">Event Highlights</h2>
       <div class="grid gap-8 grid-cols-1 md:grid-cols-4">
@@ -40,8 +57,9 @@
     </div>
   </section>
 
-  <section class="py-16 px-4 bg-gray-100 fade-in">
-    <h2 class="text-3xl font-bold text-center mb-10">Featured Speakers</h2>
+  <!-- Speakers -->
+  <section id="speakers" class="py-16 px-4 bg-gray-100 fade-in">
+    <h2 class="text-3xl font-bold text-center mb-10">Meet the Speakers</h2>
     <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
       <div class="bg-white rounded-xl p-6 shadow text-center">
         <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde" alt="Speaker 1" class="mx-auto rounded-full w-28 h-28 object-cover mb-4">
@@ -61,16 +79,20 @@
     </div>
   </section>
 
-  <section class="py-16 px-4 text-center bg-gradient-to-r from-purple-500 to-pink-500 text-white fade-in">
-    <h2 class="text-3xl font-bold mb-4">Countdown to the Big Day</h2>
-    <div id="countdown" class="text-2xl font-mono animate-pulse"></div>
+  <!-- Countdown -->
+  <section id="countdown" class="py-16 px-4 text-center bg-gradient-to-r from-purple-500 to-pink-500 text-white fade-in">
+    <h2 class="text-3xl font-bold mb-4">Countdown to GCCD Kolkata '25</h2>
+    <p class="text-lg mb-4">Event Date: 19th July 2025</p>
+    <div id="countdownTimer" class="text-2xl font-mono animate-pulse"></div>
   </section>
 
+  <!-- Outro -->
   <section class="py-16 px-4 max-w-4xl mx-auto fade-in">
     <h2 class="text-3xl font-bold text-center mb-8">Why I'm Hyped</h2>
     <p class="text-lg text-center">As a developer passionate about the latest in cloud, AI, and open source, GCCD is *the* place to be. I'm excited to meet like-minded devs, hear stories from industry leaders, and experience the buzzing energy of the GDG community!</p>
   </section>
 
+  <!-- Footer -->
   <footer class="bg-gray-800 text-white text-center py-6">
     <p>Built with 💙 by Sabarni Guha @ GDG On Campus CodeSprint</p>
     <div class="mt-2 space-x-4">
@@ -80,11 +102,10 @@
     </div>
   </footer>
 
+  <!-- Countdown Script -->
   <script>
-    const countdown = document.getElementById("countdown");
-    const now = new Date();
-    const eventDate = new Date(now.getTime() + 16 * 24 * 60 * 60 * 1000);
-    eventDate.setHours(9, 0, 0);
+    const countdownEl = document.getElementById("countdownTimer");
+    const eventDate = new Date("2025-07-19T09:00:00");
 
     function updateCountdown() {
       const now = new Date().getTime();
@@ -93,7 +114,7 @@
       const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-      countdown.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      countdownEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
     setInterval(updateCountdown, 1000);
     updateCountdown();
