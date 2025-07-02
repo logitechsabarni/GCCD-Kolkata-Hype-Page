@@ -1,0 +1,6 @@
+git init
+git remote add origin https://github.com/sabarni-guha/gccd-kolkata-25-hype-page.git
+git branch -M main
+git add .
+git commit -m "Initial commit"
+git push -u origin main
