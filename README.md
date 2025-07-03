@@ -35,6 +35,4 @@ This single-page site is designed to hype up the **GCCD Kolkata '25** event with
 - 🚀 Hosted on GitHub Pages
 
 The link for the website or webpage is :-
-https://gccd-kolkata-hype-page-4wnspitmk-logitechsabarnis-projects.vercel.app/
-
-
+https://gccd-kolkata-hype-page.vercel.app/
